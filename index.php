@@ -21,7 +21,7 @@ $blockbuster = [
 ];
 
 // var_dump($blockbuster);
-
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -33,8 +33,24 @@ $blockbuster = [
 </head>
 <body>
 
+    <div>
+        <ul>
 
+            <?php foreach($blockbuster as $elem) { ?>
+
+                <li><?php echo $elem->title ?>
+                    <ul>
+                        <li><?php echo $elem->genre?></li>
+                        <li><?php echo $elem->description?></li>
+                        <li><?php echo $elem->lenght?></li>
+                    </ul>   
+                </li>
+                
+
+            <?php } ?>
+
+        </ul>
+    </div>
     
 </body>
 </html>
-?>
